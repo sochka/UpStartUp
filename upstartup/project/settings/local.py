@@ -14,9 +14,6 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 
-ALLOWED_HOSTS = ['localhost', ]
-
-
 SECRET_KEY = '!1y9m_%mg@hokoq5q5&74=gxi+ny5gc^j!b0_x%qwtg(n4jsw('
 
 

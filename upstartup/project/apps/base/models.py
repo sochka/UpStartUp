@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 
 
 class Startup(models.Model):
-
     owner = models.ForeignKey(User, unique=True, name='Owner')
     name = models.TextField(name='Name')
     created_at = models.DateTimeField(name='Created At')
@@ -29,3 +28,6 @@ class Startup(models.Model):
     management = models.TextField(name='Management')
     technologies = models.TextField(name='Technologies')
     jobs = models.TextField(name='Jobs')
+
+    def __unicode__(self):
+        return '{}'.format(self.id)
