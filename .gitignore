@@ -4,4 +4,5 @@
 *.sqlite3
 upstartup/media/
 *.*~
+*.swp
 
