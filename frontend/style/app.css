@@ -1,0 +1,7 @@
+[ng-cloak] {
+    display:none;
+}
+
+[ng-controller="NewStartupFormController"] {
+    max-width: 40rem;
+}

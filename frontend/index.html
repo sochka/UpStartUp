@@ -1,0 +1,82 @@
+<!doctype html>
+<html ng-app="appStartup">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body ng-cloak>
+<form ng-controller="NewStartupFormController">
+    <div class="form-group">
+        <label for="image">Image</label>
+        <input class="form-control" id="image" ng-model="formData.image" placeholder="image">
+    </div>
+    <div class="form-group" ng-if="wasFilled.image">
+        <label for="problem">Problem</label>
+        <input class="form-control" id="problem" ng-model="formData.problem" placeholder="problem">
+    </div>
+    <div class="form-group" ng-if="wasFilled.problem">
+        <label for="idea">Idea</label>
+        <input class="form-control" id="idea" ng-model="formData.idea" placeholder="idea">
+    </div>
+    <div class="form-group" ng-if="wasFilled.idea">
+        <label for="audience">Audience</label>
+        <input class="form-control" id="audience" ng-model="formData.audience" placeholder="audience">
+    </div>
+    <div class="form-group" ng-if="wasFilled.audience">
+        <label for="description">Description</label>
+        <input class="form-control" id="description" ng-model="formData.description" placeholder="description">
+    </div>
+    <div class="form-group" ng-if="wasFilled.description">
+        <label for="useCases">UseCases</label>
+        <input class="form-control" id="useCases" ng-model="formData.useCases" placeholder="useCases">
+    </div>
+    <div class="form-group" ng-if="wasFilled.useCases">
+        <label for="prodMark">ProdMark</label>
+        <input class="form-control" id="prodMark" ng-model="formData.prodMark" placeholder="prodMark">
+    </div>
+    <div class="form-group" ng-if="wasFilled.prodMark">
+        <label for="benefits">Benefits</label>
+        <input class="form-control" id="benefits" ng-model="formData.benefits" placeholder="benefits">
+    </div>
+    <div class="form-group" ng-if="wasFilled.benefits">
+        <label for="competition">Competition</label>
+        <input class="form-control" id="competition" ng-model="formData.competition" placeholder="competition">
+    </div>
+    <div class="form-group" ng-if="wasFilled.competition">
+        <label for="strategy">Strategy</label>
+        <input class="form-control" id="strategy" ng-model="formData.strategy" placeholder="strategy">
+    </div>
+    <div class="form-group" ng-if="wasFilled.strategy">
+        <label for="promotion">Promotion</label>
+        <input class="form-control" id="promotion" ng-model="formData.promotion" placeholder="promotion">
+    </div>
+    <div class="form-group" ng-if="wasFilled.promotion">
+        <label for="business">Business</label>
+        <input class="form-control" id="business" ng-model="formData.business" placeholder="business">
+    </div>
+    <div class="form-group" ng-if="wasFilled.business">
+        <label for="milestones">Milestones</label>
+        <input class="form-control" id="milestones" ng-model="formData.milestones" placeholder="milestones">
+    </div>
+    <div class="form-group" ng-if="wasFilled.milestones">
+        <label for="risks">Risks</label>
+        <input class="form-control" id="risks" ng-model="formData.risks" placeholder="risks">
+    </div>
+    <div class="form-group" ng-if="wasFilled.risks">
+        <label for="management">Management</label>
+        <input class="form-control" id="management" ng-model="formData.management" placeholder="management">
+    </div>
+    <div class="form-group" ng-if="wasFilled.management">
+        <label for="technologies">Technologies</label>
+        <input class="form-control" id="technologies" ng-model="formData.technologies" placeholder="technologies">
+    </div>
+    <div class="form-group" ng-if="wasFilled.technologies">
+        <label for="jobs">Jobs</label>
+        <input class="form-control" id="jobs" ng-model="formData.jobs" placeholder="jobs">
+    </div>
+    <button type="button" class="btn btn-primary" ng-if="wasFilled.jobs">Save</button>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+<script src="/scripts/app.js"></script>
+</body>
+</html>
