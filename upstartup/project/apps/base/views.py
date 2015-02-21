@@ -6,6 +6,7 @@ from rest_framework import status, generics, viewsets
 from rest_framework import filters
 
 from .serializers import StartUpSerializer
+from .models import Startup
 
 
 def logout_user(request):
@@ -16,17 +17,9 @@ def logout_user(request):
 
 
 class StartUpList(generics.ListAPIView):
-    # queryset = StartUp.objects.filter()
+    queryset = Startup.objects.filter()
     serializer_class = StartUpSerializer
     paginate_by = 3
     paginate_by_param = 'page_size'
     max_paginate_by = 100
     filter_backends = (filters.OrderingFilter,)
-    # ordering_fields = ('-pub_date',)
-    # ordering = ('-pub_date',)
-
-    def get_queryset(self):
-        pass
-
-    # def list(self, request, *args, **kwargs):
-    #     return _list(self, request, *args, **kwargs)
