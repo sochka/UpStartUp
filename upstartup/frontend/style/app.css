@@ -1,0 +1,21 @@
+[ng-cloak] {
+    display:none;
+}
+
+body {
+    margin: auto;
+    width: 60rem;
+    
+}
+[ng-controller="NewStartupFormController"] {
+    max-width: 40rem;
+}
+
+input.ng-valid.ng-touched {
+    background-color: green;
+    color: white;    
+}
+input.ng-invalid.ng-touched {
+    background-color: red;
+    
+}
