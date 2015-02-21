@@ -1,4 +1,22 @@
-angular.module('appStartup', [])
+angular.module('appStartup', ['ui.router'])
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        $locationProvider.html5Mode(true);
+        
+        $stateProvider.state('not-found', {
+            url: '/404',
+            template: 'error 404'
+        });
+
+        $stateProvider.state('new-startup', {
+            url: "/",
+            templateUrl: function ($stateParams) {
+                return '/static/views/new-startup.html';
+            }
+        });
+
+
+        $urlRouterProvider.otherwise('/index');
+    })
     .controller('NewStartupFormController', function ($scope) {
         $scope.formData = {};
         $scope.wasFilled = {};

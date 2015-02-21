@@ -2,3 +2,6 @@
 *.iml
 *.pyc
 *.sqlite3
+upstartup/media/
+*.*~
+
