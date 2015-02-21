@@ -1,0 +1,23 @@
+# PRODUCTION DEVELOPMENT DEPENDENCIES
+
+-r base.txt
+
+
+# PACKAGES FOR PRODUCTION alwaysdata.net
+
+PyJWT>=0.2.1
+flup>=1.0.2
+kombu>=3.0.21
+billiard>=3.3.0.18
+pytz>=2014.7
+ecdsa>=0.11
+amqp>=1.4.6
+anyjson>=0.3.3
+importlib>=1.0.3
+jsonfield>=1.0.0
+oauthlib>=0.6.3
+ordereddict>=1.1
+paramiko>=1.14.1
+pycrypto>=2.6.1
+
+# gunicorn==0.17.4

@@ -1,0 +1,25 @@
+# CORE PACKAGES
+
+# Web framework
+Django>=1.6.6,<1.7
+
+djangorestframework
+
+# Deploynent
+Fabric>=1.10.0
+
+# Migrations
+South>=1.0
+
+# Image llib
+Pillow>=2.5.3
+
+# Social auth
+python-social-auth>=0.1.26
+
+# Preaty forms
+django-crispy-forms>=1.4.0
+
+# Sort apps in admin
+django-admin-sortable2>=0.3.2
+
