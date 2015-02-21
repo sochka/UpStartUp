@@ -17,7 +17,7 @@ angular.module('appStartup', ['ui.router'])
 
         $urlRouterProvider.otherwise('/index');
     })
-    .controller('NewStartupFormController', function ($scope) {
+    .controller('NewStartupFormController', function ($scope, $http) {
         $scope.formData = {};
         $scope.wasFilled = {};
         $scope.$watch('formData', function (newValue, oldValue) {
@@ -25,4 +25,12 @@ angular.module('appStartup', ['ui.router'])
                 $scope.wasFilled[field] = $scope.wasFilled[field] || $scope.formData[field];
             }
         }, true);
+        
+        $scope.saveData = function () {
+            $http.put('/api/startup/add/', $scope.formData).then(function (result) {
+
+            }, function (error) {
+
+            });
+        }
     });

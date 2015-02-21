@@ -10,7 +10,35 @@
     </div>
     <div class="form-group" ng-if="wasFilled.name">
         <label for="problem">Problem</label>
-        <input class="form-control" id="problem" ng-model="formData.problem" placeholder="Project problem" required>
+        <select class="form-control" id="problem" ng-model="formData.problem" placeholder="Project problem" required>
+            <option>Information Technology</option>
+            <option>Consumers</option>
+            <option>Consumer Internet</option>
+            <option>Consumer Goods</option>
+            <option>Games</option>
+            <option>Personal Health</option>
+            <option>Enterprises</option>
+            <option>Media</option>
+            <option>Health Care</option>
+            <option>Education</option>
+            <option>Finance</option>
+            <option>Life Sciences</option>
+            <option>Platforms</option>
+            <option>Health and Wellness</option>
+            <option>Fashion</option>
+            <option>Retail</option>
+            <option>Sports</option>
+            <option>Design</option>
+            <option>Travel</option>
+            <option>Clean Technology</option>
+            <option>Web Development</option>
+            <option>Demographies</option>
+            <option>Real Estate</option>
+            <option>Automotive</option>
+            <option>Entertainment</option>
+            <option>Events</option>
+            <option>Energy</option>
+        </select>
     </div>
     <div class="form-group" ng-if="wasFilled.name">
         <label for="idea">Idea</label>
@@ -72,5 +100,5 @@
         <label for="jobs">Jobs</label>
         <input class="form-control" id="jobs" ng-model="formData.jobs" placeholder="Project jobs" required>
     </div>
-    <button type="button" class="btn btn-primary" ng-if="wasFilled.jobs">Save</button>
+    <button type="button" class="btn btn-primary" ng-disabled="!wasFilled.jobs" ng-click="saveData()">Save</button>
 </form>
