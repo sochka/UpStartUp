@@ -6,8 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Startup(models.Model):
-    owner = models.ForeignKey(User, unique=True)
-    name = models.TextField(_('Owner'), default="Test")
+    name = models.TextField(_('Name'), default="Test")
     created_at = models.DateTimeField(_('Created At'))
     updated_at = models.DateTimeField(_('Updated At'))
     link = models.URLField(_('Link'))

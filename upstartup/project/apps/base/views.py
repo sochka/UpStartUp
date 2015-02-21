@@ -4,6 +4,7 @@ from django.contrib.auth import logout
 
 from rest_framework import status, generics, viewsets
 from rest_framework import filters
+from rest_framework import routers, serializers, viewsets
 
 from .serializers import StartUpSerializer
 from .models import Startup
@@ -16,7 +17,7 @@ def logout_user(request):
     return HttpResponseRedirect(settings.LOGOUTH_URL)
 
 
-class StartUpList(generics.ListAPIView):
+class StartUpViewSet(viewsets.ModelViewSet):
     queryset = Startup.objects.filter()
     serializer_class = StartUpSerializer
     paginate_by = 3

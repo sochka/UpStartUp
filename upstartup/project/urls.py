@@ -3,18 +3,23 @@ from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
 from django.conf import settings
 from django.views.generic import TemplateView
+from rest_framework import routers
 
-from project.apps.base.views import logout_user, StartUpList
+from project.apps.base.views import logout_user, StartUpViewSet
 
 
 from django.contrib import admin
 admin.autodiscover()
 
 
+router = routers.DefaultRouter()
+router.register(r'startup', StartUpViewSet)
+
+
 urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name="index.html"), name='index_page'),
+    url(r'^api/', include(router.urls)),
     url(r'^logout/$', logout_user, name='logout'),
-    url(r'^api/startups/$', StartUpList.as_view(), name='startup_list'),
     url(r'^admin/', include(admin.site.urls)),
 )
 
