@@ -1,0 +1,22 @@
+List of startups: (filter query): <input ng-model="searchText">
+
+<div ng-repeat="startup in startups | filter:searchText" style="border: 1px solid black">
+    <div>Name: {{ startup.name }}</div>
+    <div>Audience: {{ startup.Audience }}</div>
+    <div>Benefits: {{ startup.Benefits }}</div>
+    <div>Business: {{ startup.Business }}</div>
+    <div>Competition: {{ startup.Competition }}</div>
+    <div>Description: {{ startup.Description }}</div>
+    <div>Idea: {{ startup.Idea }}</div>
+    <div>Image: {{ startup.Image }}</div>
+    <div>Jobs: {{ startup.Jobs }}</div>
+    <div>Management: {{ startup.Management }}</div>
+    <div>Milestones: {{ startup.Milestones }}</div>
+    <div>Prod Mark: {{ startup['Prod Mark'] }}</div>
+    <div>Promotion: {{ startup.Promotion }}</div>
+    <div>Risks: {{ startup.Risks }}</div>
+    <div>Strategy: {{ startup.Strategy }}</div>
+    <div>Technologies: {{ startup.Technologies }}</div>
+    <div>Use Cases: {{ startup['Use Cases'] }}</div>
+    <div>link: {{ startup.link }}</div>
+</div>
