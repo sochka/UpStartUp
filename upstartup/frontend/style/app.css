@@ -11,10 +11,6 @@ body {
     max-width: 40rem;
 }
 
-input.ng-valid.ng-touched {
-    background-color: green;
-    color: white;    
-}
 input.ng-invalid.ng-touched {
     background-color: red;
     
