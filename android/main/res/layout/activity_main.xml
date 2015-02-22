@@ -1,0 +1,1009 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+        >
+
+    <com.manuelpeinado.fadingactionbar.view.ObservableScrollView
+            android:id="@+id/scrollview"
+            android:text="@string/hello_world"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            <ImageView
+                    android:id="@+id/header"
+                    android:layout_height="300dp"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_launcher"
+                    android:scaleType="fitCenter"
+                    />
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    >
+                <!--Problem block-->
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:id="@+id/problem_header"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:visibility="visible"
+                        >
+
+                    <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/project_problem"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_marginTop="16dp"
+                            android:textSize="16sp"
+                            android:id="@+id/tv1"
+                            />
+
+                    <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/blueGray_100"
+                            android:visibility="gone"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                        <TextView
+                                android:id="@+id/tv_project_problem"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/project_stub_text"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp"
+
+                                />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--End of Problem block-->
+
+                <!--Idea block-->
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:id="@+id/idea_header"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:visibility="visible"
+                        >
+
+                    <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginLeft="32dp"
+                            android:background="@color/blueGray_100"
+                            android:visibility="visible"
+                            />
+
+                    <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/project_idea"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_marginTop="8dp"
+                            android:textSize="16sp"
+                            android:id="@+id/tv2"
+
+                            />
+
+
+                    <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                        <TextView
+                                android:id="@+id/tv_project_idea"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/project_stub_text"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp"
+
+                                />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--End of Problem block-->
+
+                <!--&lt;!&ndash;Target block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/target_audience_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_target_audience"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv3"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_target"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Target block&ndash;&gt;-->
+
+                <!--Description block-->
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:id="@+id/description_header"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:visibility="visible"
+                        >
+
+                    <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginLeft="32dp"
+                            android:background="@color/blueGray_100"
+                            android:visibility="visible"
+                            />
+
+                    <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/project_description"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_marginTop="8dp"
+                            android:textSize="16sp"
+                            android:id="@+id/tv4"
+
+                            />
+
+
+                    <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                        <TextView
+                                android:id="@+id/tv_project_description"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/project_stub_text"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp"
+
+                                />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--End of Description block-->
+
+                <!--&lt;!&ndash;Use cases block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/use_cases_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_use_case"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv5"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_use_cases"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Use cases block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;Unique block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/unique_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_uniqueness"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv6"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_uniqueness"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Unique block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;Benefits block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/benefits_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_benefits"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv7"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_benefits"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Benefits block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;Competition block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/competition_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_competition"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv8"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_competition"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Competition block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;Strategy block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/strategy_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_strategy"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv9"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_strategy"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Strategy block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;Promotion block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/promotion_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_promotion"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv10"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_promotion"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Promotion block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;Business block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/business_model_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_business_model"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv11"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_business_model"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Business block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;KPIs block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/kpis_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_kpis"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv12"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_kpis"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of KPIs block&ndash;&gt;-->
+
+                <!--Risks block-->
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:id="@+id/risks_header"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:visibility="visible"
+                        >
+
+                    <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginLeft="32dp"
+                            android:background="@color/blueGray_100"
+                            android:visibility="visible"
+                            />
+
+                    <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/project_risks"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_marginTop="8dp"
+                            android:textSize="16sp"
+                            android:id="@+id/tv13"
+
+                            />
+
+
+                    <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                        <TextView
+                                android:id="@+id/tv_project_risks"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/project_stub_text"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp"
+
+                                />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--End of Risks block-->
+
+                <!--Team block-->
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:id="@+id/team_header"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:visibility="visible"
+                        android:layout_marginBottom="16dp"
+                        >
+
+                    <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginLeft="32dp"
+                            android:background="@color/blueGray_100"
+                            android:visibility="visible"
+                            />
+
+                    <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/project_team"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_marginTop="8dp"
+                            android:textSize="16sp"
+                            android:id="@+id/tv14"
+
+                            />
+
+
+                    <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="16dp"
+                            >
+
+                        <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:id="@+id/imageView"
+                                android:layout_gravity="center_vertical"
+                                />
+
+                        <TextView
+                                android:id="@+id/tv_project_team"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="name"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="16dp"
+                                />
+
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="..and 2 more"
+                            android:id="@+id/textView"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/blueGray_100"
+                            android:textColor="@color/white"
+                            />
+                </LinearLayout>
+                <!--End of Team block-->
+
+                <!--&lt;!&ndash;Management block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/management_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_management"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv15"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_management"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Management block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;Tech block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/technologies_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_technologies"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv16"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_technologies"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Tech block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;Jobs block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/jobs_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_jobs"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv17"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_jobs"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Jobs block&ndash;&gt;-->
+
+                <!--&lt;!&ndash;Investment block&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:id="@+id/investment_header"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!-->-->
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="32dp"-->
+                <!--android:layout_marginLeft="32dp"-->
+                <!--android:background="@color/blueGray_100"-->
+                <!--android:visibility="visible"-->
+                <!--/>-->
+                <!--<TextView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_investment"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:id="@+id/tv18"-->
+
+                <!--/>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!-->-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_project_investment"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/project_stub_text"-->
+                <!--android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
+                <!--android:textSize="14sp"-->
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;End of Investment block&ndash;&gt;-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.manuelpeinado.fadingactionbar.view.ObservableScrollView>
+
+    <include layout="@layout/toolbar"/>
+
+</RelativeLayout>

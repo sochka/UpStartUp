@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UpStartup</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="project_stub_text">Stub text. Stub text. Stub text. Stub text.
+        Stub text. Stub text. Stub text. Stub text. Stub text. Stub text. Stub text.
+        Stub text. Stub text. Stub text.</string>
+    <string name="project_problem">Problem</string>
+    <string name="project_idea">Idea</string>
+    <string name="project_target_audience">Target audience</string>
+    <string name="project_description">Product description</string>
+    <string name="project_use_case">Use cases</string>
+    <string name="project_uniqueness">Product and Marketing uniqueness</string>
+    <string name="project_benefits">User benefits (value preposition)</string>
+    <string name="project_competition">Competition</string>
+    <string name="project_strategy">Marketing strategy</string>
+    <string name="project_promotion">Promotion</string>
+    <string name="project_business_model">Business model</string>
+    <string name="project_kpis">Project milestones and KPIs</string>
+    <string name="project_risks">Risks</string>
+    <string name="project_team">Team and key people</string>
+    <string name="project_management">Project management</string>
+    <string name="project_technologies">Technologies</string>
+    <string name="project_jobs">Jobs</string>
+    <string name="project_investment">Investment</string>
+
+</resources>
