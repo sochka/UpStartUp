@@ -4,11 +4,19 @@
 
 body {
     margin: auto;
-    width: 60rem;
+    width: 83rem;
     
 }
 [ng-controller="NewStartupFormController"] {
     max-width: 40rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
 }
 
 input.ng-invalid.ng-touched {

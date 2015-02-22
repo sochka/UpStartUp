@@ -1,8 +1,8 @@
 <a href="/list">List of startups</a>
 <form novalidate>
-    <h4>New startup:</h4>
+    <h3>New startup</h3>
     <div class="form-group">
-        <label for="image" style="font-size: larger">Name</label>
+        <label for="image">Name</label>
         <input class="form-control" id="name" ng-model="formData.Name" placeholder="Project name">
     </div>
     <div class="form-group">
@@ -13,11 +13,11 @@
         <label for="VideoLink">Product video link</label>
         <input class="form-control" id="VideoLink" ng-model="formData.VideoLink" placeholder="Video Link" type="url">
     </div>
-    <div class="form-group" ng-if="wasFilled.Name">
+    <div class="form-group">
         <label for="image">Image</label>
         <input class="form-control" id="image" ng-model="formData.Image" placeholder="Image url">
     </div>
-    <div class="form-group" ng-if="wasFilled.Name">
+    <div class="form-group">
         <h3> Problem</h3>
         <label for="areas">Areas</label>
         <select class="form-control" id="areas" ng-model="formData.Areas" placeholder="Project area">
@@ -50,7 +50,7 @@
             <option>Energy</option>
         </select>
     </div>
-    <div class="form-group" ng-if="wasFilled.Name">
+    <div class="form-group">
         <b>Situation with existing solutions</b><br>
         <input ng-model="formData.Situation.reqFun" type="checkbox">&nbsp; They do not provide functions<br>
         <input ng-model="formData.Situation.poorQuality" type="checkbox">&nbsp; They work with the poor quality<br>
@@ -58,68 +58,184 @@
         <input ng-model="formData.Situation.expensive" type="checkbox">&nbsp; They are expensive<br>
         <input ng-model="formData.Situation.timeConsuming" type="checkbox">&nbsp; They are time consuming<br>
         <input ng-model="formData.Situation.inconvenient" type="checkbox">&nbsp; They are inconvenient<br>
-        Notes: <input ng-model="formData.Situation.custom">
+        Notes: <input  class="form-control"  ng-model="formData.SituationNotes">
     </div>
-    <div class="form-group" ng-if="wasFilled.Name">
+    <div class="form-group">
         <label for="idea">Idea</label>
         <textarea rows="5" class="form-control" id="idea" ng-model="formData.Idea" placeholder="Project idea">
         </textarea>
     </div>
-    <div class="form-group" ng-if="wasFilled.Name">
-        <label for="audience">Target audience</label>
-        <input class="form-control" id="audience" ng-model="formData.Audience" placeholder="Target audience">
+    <h3> Target audience</h3>
+    <div class="form-group">
+        <b>b2c customers</b>
+        <table class="table">
+            <tr>
+                <th>Name of group</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Location</th>
+                <th>Interests</th>
+                <th>Budget</th>
+                <th>Amount</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="b2cAuditory in formData.b2cAuditories">
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.groupName" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.gender" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.age" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.location" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.interests" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.budget" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.amount" class="form-control"></textarea></td>
+                <td><input type="button" class="form-control btn-danger"
+                           ng-click="formData.b2cAuditories.splice(formData.b2cAuditories.indexOf(b2cAuditory), 1)"
+                        value="Delete"></td>
+            </tr>
+        </table>
+        <input type="button" ng-click="formData.b2cAuditories.push({})" value="Add new row">
+        <br>
     </div>
-    <div class="form-group" ng-if="wasFilled.Audience">
-        <label for="description">Description</label>
-        <input class="form-control" id="description" ng-model="formData.Description" placeholder="Project description">
+    <div class="form-group">
+        <b>b2b customers</b>
+        <table class="table">
+            <tr>
+                <th>Name of group</th>
+                <th>Type</th>
+                <th>Age</th>
+                <th>Location</th>
+                <th>Goals</th>
+                <th>Budget</th>
+                <th>Amount</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="b2bAuditory in formData.b2bAuditories">
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.groupName" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.type" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.age" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.location" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.goals" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.budget" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.amount" class="form-control"></textarea></td>
+                <td><input type="button" class="form-control btn-danger"
+                           ng-click="formData.b2bAuditories.splice(formData.b2bAuditories.indexOf(b2bAuditory), 1)"
+                           value="Delete"></td>
+            </tr>
+        </table>
+        <input type="button" ng-click="formData.b2bAuditories.push({})" value="Add new row">
+        <br>
     </div>
-    <div class="form-group" ng-if="wasFilled.Description">
-        <label for="useCases">UseCases</label>
-        <input class="form-control" id="useCases" ng-model="formData['Use Cases']" placeholder="Project useCases">
+    Notes: <input  class="form-control"  ng-model="formData.TargetAudienceNotes">
+    <h3>Product description</h3>
+    <div class="form-group">
+        <label for="phaseOfDev">Phase of development</label><br>
+        <input type="checkbox" ng-model="formData.phaseOfDev.Concept">Concept<br>
+        <input type="checkbox" ng-model="formData.phaseOfDev.MVP">MVP<br>
+        <input type="checkbox" ng-model="formData.phaseOfDev.Product">Product with users<br>
+        <input type="checkbox" ng-model="formData.phaseOfDev.Scaling">Scaling sales<br>
     </div>
-    <div class="form-group" ng-if="wasFilled['Use Cases']">
-        <label for="prodMark">ProdMark</label>
-        <input class="form-control" id="prodMark" ng-model="formData['Prod Mark']" placeholder="Project prodMark">
+    <div class="form-group">
+        <b>Type</b><br>
+        <input type="checkbox" ng-model="formData.type.Service">Service<br>
+        <input type="checkbox" ng-model="formData.type.Content">Content<br>
+        <input type="checkbox" ng-model="formData.type.Network">Network<br>
+        <input type="checkbox" ng-model="formData.type.Game">Game<br>
+        <input type="checkbox" ng-model="formData.type.Application">Application<br>
+        <input type="checkbox" ng-model="formData.type.PhysicalProduct">Physical Product<br>
     </div>
-    <div class="form-group" ng-if="wasFilled['Prod Mark']">
-        <label for="benefits">Benefits</label>
-        <input class="form-control" id="benefits" ng-model="formData.Benefits" placeholder="Project benefits">
+    <div class="form-group">
+        <b>Platforms</b><br>
+        <input type="checkbox" ng-model="formData.platform.Android">Android<br>
+        <input type="checkbox" ng-model="formData.platform.iOS">iOS<br>
+        <input type="checkbox" ng-model="formData.platform.Mac">Mac<br>
+        <input type="checkbox" ng-model="formData.platform.Windows">Windows<br>
+        <input type="checkbox" ng-model="formData.platform.WindowsPhone">WindowsPhone<br>
+        <input type="checkbox" ng-model="formData.platform.Linux">Linux<br>
+        <input type="checkbox" ng-model="formData.platform.Other">Other<br>
     </div>
-    <div class="form-group" ng-if="wasFilled.Benefits">
-        <label for="competition">Competition</label>
+    <h3>Uniqueness</h3>
+    <div class="form-group">
+        <b>Properties</b><br>
+        <input type="checkbox" ng-model="formData.properties.uniqueTech">Unique technology<br>
+        <input type="checkbox" ng-model="formData.properties.marketingInnovations">Innovations in marketing<br>
+        <input type="checkbox" ng-model="formData.properties.deepCustomerConnection">Deep connections with customers<br>
+        <input type="checkbox" ng-model="formData.properties.lowestPrice">The lowest price<br>
+    </div>
+    <b>Intellectual property:</b> <input  class="form-control"  ng-model="formData.IntellectualProperty">
+    <h3>User benefits</h3>
+    <div class="form-group">
+        <b>b2c customers:</b><br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.createsFeatures">Creates new features<br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.improvesQofP">Improves the quality of performance<br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.providesService">Provides additional service<br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.reducesCosts">Reduces costs<br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.improvesUsability">Improves the usability<br>
+    </div>
+    <div class="form-group">
+        <b>b2b customers:</b><br>
+        <input type="checkbox" ng-model="formData.benefits.b2b.helpsToFindNewCustomers">Helps to find new customers<br>
+        <input type="checkbox" ng-model="formData.benefits.b2b.increasesLoyalty">Increases the loyalty of existing customers<br>
+        <input type="checkbox" ng-model="formData.benefits.b2b.helpsToDifferentiate">Helps to differentiate from competitors<br>
+        <input type="checkbox" ng-model="formData.benefits.b2b.reducesCosts">Reduces costs<br>
+    </div>
+    Notes: <input  class="form-control"  ng-model="formData.benefits.notes">
+    <div class="form-group">User benefits
+        <h3>Market</h3>
+        <table class="table">
+            <tr>
+                <th>Market name</th>
+                <th>Market size</th>
+                <th>Currency</th>
+                <th>% of changes vs previous year</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="market in formData.markets">
+                <td><textarea elastic rows="1" ng-model="market.name" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="market.size" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="market.currency" class="form-control"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="market.percentOfChanges" class="form-control"></textarea></td>
+                <td><input type="button" class="form-control btn-danger"
+                           ng-click="formData.markets.splice(formData.markets.indexOf(market), 1)"
+                           value="Delete"></td>
+            </tr>
+        </table>
+        <input type="button" ng-click="formData.markets.push({})" value="Add new row">
+        <br>
+    </div>
+    <div class="form-group">
+        <h3>Competition</h3>
         <input class="form-control" id="competition" ng-model="formData.Competition" placeholder="Project competition">
     </div>
-    <div class="form-group" ng-if="wasFilled.Competition">
+    <div class="form-group">
         <label for="strategy">Strategy</label>
         <input class="form-control" id="strategy" ng-model="formData.Strategy" placeholder="Project strategy">
     </div>
-    <div class="form-group" ng-if="wasFilled.Strategy">
+    <div class="form-group">
         <label for="promotion">Promotion</label>
         <input class="form-control" id="promotion" ng-model="formData.Promotion" placeholder="Project promotion">
     </div>
-    <div class="form-group" ng-if="wasFilled.Promotion">
+    <div class="form-group">
         <label for="business">Business</label>
         <input class="form-control" id="business" ng-model="formData.Business" placeholder="Project business">
     </div>
-    <div class="form-group" ng-if="wasFilled.Business">
+    <div class="form-group">
         <label for="milestones">Milestones</label>
         <input class="form-control" id="milestones" ng-model="formData.Milestones" placeholder="Project milestones">
     </div>
-    <div class="form-group" ng-if="wasFilled.Milestones">
+    <div class="form-group">
         <label for="risks">Risks</label>
         <input class="form-control" id="risks" ng-model="formData.Risks" placeholder="Project risks">
     </div>
-    <div class="form-group" ng-if="wasFilled.Risks">
+    <div class="form-group">
         <label for="management">Management</label>
         <input class="form-control" id="management" ng-model="formData.Management" placeholder="Project management">
     </div>
-    <div class="form-group" ng-if="wasFilled.Management">
+    <div class="form-group">
         <label for="technologies">Technologies</label>
         <input class="form-control" id="technologies" ng-model="formData.Technologies" placeholder="Project technologies">
     </div>
-    <div class="form-group" ng-if="wasFilled.Technologies">
+    <div class="form-group">
         <label for="jobs">Jobs</label>
         <input class="form-control" id="jobs" ng-model="formData.Jobs" placeholder="Project jobs">
     </div>
-    <button type="button" class="btn btn-primary" ng-disabled="!wasFilled.Jobs" ng-click="saveData()">Save</button>
+    <button type="button" class="btn btn-btn-primary" ng-disabled="!wasFilled.Jobs" ng-click="saveData()">Save</button>
 </form>

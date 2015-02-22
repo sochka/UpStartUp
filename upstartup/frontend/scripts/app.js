@@ -23,14 +23,27 @@ angular.module('appStartup', ['ui.router'])
 
         $urlRouterProvider.otherwise('/index');
     })
+    .directive('elastic', [
+        '$timeout',
+        function($timeout) {
+            return {
+                restrict: 'A',
+                link: function($scope, element) {
+                    var resize = function() {
+                        return element[0].style.height = "" + element[0].scrollHeight + "px";
+                    };
+                    element.on("blur keyup change input", resize);
+                    $timeout(resize, 0);
+                }
+            };
+        }
+    ])
     .controller('NewStartupFormController', function ($scope, $http) {
         $scope.formData = {};
-        $scope.wasFilled = {};
-        $scope.$watch('formData', function (newValue, oldValue) {
-            for (var field in $scope.formData) {
-                $scope.wasFilled[field] = $scope.wasFilled[field] || $scope.formData[field];
-            }
-        }, true);
+        $scope.formData.b2cAuditories = [];
+        $scope.formData.b2bAuditories = [];
+        $scope.formData.markets = [];
+
 
         $scope.saveData = function () {
             
