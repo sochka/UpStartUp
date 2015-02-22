@@ -1,19 +1,92 @@
-{% load i18n static %}
+{% load static %}
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Sat Feb 21 2015 22:03:48 GMT+0000 (UTC) -->
+<html data-wf-site="54e8fcc878da9cde63801b7d" data-wf-page="54e8fcc878da9cde63801b7f" data-wf-status='1'>
 
-<!doctype html>
-<html ng-app="appStartup">
 <head>
-    <base href="/">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static "style/app.css" %}"></link>
+    <meta charset="utf-8">
+    <title>UpStartUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Webflow">
+    <link rel="stylesheet" type="text/css" href="https://daks2k3a4ib2z.cloudfront.net/54e8fcc878da9cde63801b7d/css/upstartup.webflow.0a7dc4c2a.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Montserrat:400,700", "Varela Round:400", "Varela:400"]
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/0globals/modernizr-2.7.1.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/530e2aa37d58f31d3100015e/53aa594370feebe336528257_webclip-gallio.png">
+    <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/530e2aa37d58f31d3100015e/53aa594370feebe336528257_webclip-gallio.png">
 </head>
-<body ng-cloak>
-<div ui-view>
-    
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
-<script src="{% static "scripts/app.js" %}"></script>
+
+<body>
+    <header class="nav-bar">
+        <div class="w-container">
+            <div class="w-row">
+                <div class="w-col w-col-4 w-clearfix brand-column">
+                    <div class="company">UpStartUp</div>
+                </div>
+                <nav class="w-col w-col-8 nav-column"><a class="nav-link sign-up" href="#page-nav-Customers" target="_self">Log in</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="section hero">
+        <div class="w-container">
+            <h1 class="hero-heading">Make your startup real</h1>
+            <p class="hero-subhead">Publishing service that makes startup for you&nbsp;</p>
+            <div class="button-group"><a class="button sign-up" href="/addstartup">Add startup</a><a class="button" href="#features">invest into startup</a>
+            </div><img src="https://daks2k3a4ib2z.cloudfront.net/54e8fcc878da9cde63801b7d/54e8fea9c7afcedc63af7021_2013-10-29-WhyWorkataStartUp.jpg" width="100%" height="516" alt="54e8fea9c7afcedc63af7021_2013-10-29-WhyWorkataStartUp.jpg">
+        </div>
+    </div>
+    <div class="section grey" id="features">
+        <div class="w-container">
+            <h2 class="section-title">Trending projects</h2>
+            <div class="w-row">
+                <div class="w-col w-col-4">
+                    <div class="circle">
+                        <div class="number">1</div><img class="frames" src="http://uploads.webflow.com/54e8fcc878da9cde63801b7d/e862862b-71c2-4c31-b42d-fa06454208fc_8-layout1.png" width="243px" alt="e862862b-71c2-4c31-b42d-fa06454208fc_8-layout1.png">
+                    </div>
+                    <h3>Driveless car</h3>
+                    <p>We create cool driveless car and so on...</p>
+                </div>
+                <div class="w-col w-col-4">
+                    <div class="circle">
+                        <div class="number">2</div><img class="frames" src="http://uploads.webflow.com/54e8fcc878da9cde63801b7d/cfb9c962-e1a7-4beb-b83e-2a04600354d3_8-layout2.png" width="243px" alt="cfb9c962-e1a7-4beb-b83e-2a04600354d3_8-layout2.png">
+                    </div>
+                    <h3>Best iPhone copy</h3>
+                    <p>We are passionate chinese guys about Apple technologies</p>
+                </div>
+                <div class="w-col w-col-4">
+                    <div class="circle">
+                        <div class="number">3</div><img class="frames" src="http://uploads.webflow.com/54e8fcc878da9cde63801b7d/765f203d-23b2-42de-9fb9-b6d11a3826d0_8-layout3.png" width="243px" alt="765f203d-23b2-42de-9fb9-b6d11a3826d0_8-layout3.png">
+                    </div>
+                    <h3>Cinema 100500D</h3>
+                    <p>Just do it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="section footer">
+        <div class="w-container">
+            <div class="w-row">
+                <div class="w-col w-col-6">
+                    <div class="footer-text">Dream team&nbsp;</div>
+                </div>
+                <div class="w-col w-col-6 right-footer-col">
+                    <a class="w-inline-block social-icon" href="mailto:work@bogomazz.com?subject=Hello"><img src="http://uploads.webflow.com/54e8fcc878da9cde63801b7d/35ec5a20-6309-494a-9d48-0e463a4d6214_14-social-email.png" width="20" alt="35ec5a20-6309-494a-9d48-0e463a4d6214_14-social-email.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/54e8fcc878da9cde63801b7d/js/webflow.b67a707b9.js"></script>
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 </body>
+
 </html>

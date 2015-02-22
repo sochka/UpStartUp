@@ -21,6 +21,9 @@ urlpatterns = patterns('',
     url(r'^api/', include(router.urls)),
     url(r'^logout/$', logout_user, name='logout'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^addstartup/$', TemplateView.as_view(template_name="Registartion.html"), name='projectRegistartion'),
+    url(r'^startups/$', TemplateView.as_view(template_name="list.html"), name='startups'),
+    url(r'^profile/$', TemplateView.as_view(template_name="ProjectProfile.html"), name='ProjectProfile'),
 )
 
 
