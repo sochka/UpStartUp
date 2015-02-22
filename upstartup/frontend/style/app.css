@@ -7,6 +7,12 @@ body {
     width: 83rem;
     
 }
+
+body table.table tr th {
+    border-top-color: black;
+    
+}
+
 [ng-controller="NewStartupFormController"] {
     max-width: 40rem;
 }

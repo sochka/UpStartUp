@@ -43,6 +43,8 @@ angular.module('appStartup', ['ui.router'])
         $scope.formData.b2cAuditories = [];
         $scope.formData.b2bAuditories = [];
         $scope.formData.markets = [];
+        $scope.formData.competitors = [];
+        $scope.formData.teammates = [];
 
 
         $scope.saveData = function () {
