@@ -3,15 +3,15 @@
     <h4>New startup:</h4>
     <div class="form-group">
         <label for="image">Name</label>
-        <input class="form-control" id="name" ng-model="formData.name" placeholder="Project name" required>
+        <input class="form-control" id="name" ng-model="formData.Name" placeholder="Project name" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.name">
+    <div class="form-group" ng-if="wasFilled.Name">
         <label for="image">Image</label>
-        <input class="form-control" id="image" ng-model="formData.image" placeholder="Project image" required>
+        <input class="form-control" id="image" ng-model="formData.Image" placeholder="Project image" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.name">
+    <div class="form-group" ng-if="wasFilled.Name">
         <label for="problem">Problem</label>
-        <select class="form-control" id="problem" ng-model="formData.problem" placeholder="Project problem" required>
+        <select class="form-control" id="problem" ng-model="formData.Problem" placeholder="Project problem" required>
             <option>Information Technology</option>
             <option>Consumers</option>
             <option>Consumer Internet</option>
@@ -41,65 +41,65 @@
             <option>Energy</option>
         </select>
     </div>
-    <div class="form-group" ng-if="wasFilled.name">
+    <div class="form-group" ng-if="wasFilled.Name">
         <label for="idea">Idea</label>
-        <input class="form-control" id="idea" ng-model="formData.idea" placeholder="Project idea" required>
+        <input class="form-control" id="idea" ng-model="formData.Idea" placeholder="Project idea" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.name">
+    <div class="form-group" ng-if="wasFilled.Name">
         <label for="audience">Audience</label>
-        <input class="form-control" id="audience" ng-model="formData.audience" placeholder="Project audience" required>
+        <input class="form-control" id="audience" ng-model="formData.Audience" placeholder="Project audience" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.audience">
+    <div class="form-group" ng-if="wasFilled.Audience">
         <label for="description">Description</label>
-        <input class="form-control" id="description" ng-model="formData.description" placeholder="Project description" required>
+        <input class="form-control" id="description" ng-model="formData.Description" placeholder="Project description" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.description">
+    <div class="form-group" ng-if="wasFilled.Description">
         <label for="useCases">UseCases</label>
-        <input class="form-control" id="useCases" ng-model="formData.useCases" placeholder="Project useCases" required>
+        <input class="form-control" id="useCases" ng-model="formData['Use Cases']" placeholder="Project useCases" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.useCases">
+    <div class="form-group" ng-if="wasFilled['Use Cases']">
         <label for="prodMark">ProdMark</label>
-        <input class="form-control" id="prodMark" ng-model="formData.prodMark" placeholder="Project prodMark" required>
+        <input class="form-control" id="prodMark" ng-model="formData['Prod Mark']" placeholder="Project prodMark" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.prodMark">
+    <div class="form-group" ng-if="wasFilled['Prod Mark']">
         <label for="benefits">Benefits</label>
-        <input class="form-control" id="benefits" ng-model="formData.benefits" placeholder="Project benefits" required>
+        <input class="form-control" id="benefits" ng-model="formData.Benefits" placeholder="Project benefits" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.benefits">
+    <div class="form-group" ng-if="wasFilled.Benefits">
         <label for="competition">Competition</label>
-        <input class="form-control" id="competition" ng-model="formData.competition" placeholder="Project competition" required>
+        <input class="form-control" id="competition" ng-model="formData.Competition" placeholder="Project competition" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.competition">
+    <div class="form-group" ng-if="wasFilled.Competition">
         <label for="strategy">Strategy</label>
-        <input class="form-control" id="strategy" ng-model="formData.strategy" placeholder="Project strategy" required>
+        <input class="form-control" id="strategy" ng-model="formData.Strategy" placeholder="Project strategy" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.strategy">
+    <div class="form-group" ng-if="wasFilled.Strategy">
         <label for="promotion">Promotion</label>
-        <input class="form-control" id="promotion" ng-model="formData.promotion" placeholder="Project promotion" required>
+        <input class="form-control" id="promotion" ng-model="formData.Promotion" placeholder="Project promotion" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.promotion">
+    <div class="form-group" ng-if="wasFilled.Promotion">
         <label for="business">Business</label>
-        <input class="form-control" id="business" ng-model="formData.business" placeholder="Project business" required>
+        <input class="form-control" id="business" ng-model="formData.Business" placeholder="Project business" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.business">
+    <div class="form-group" ng-if="wasFilled.Business">
         <label for="milestones">Milestones</label>
-        <input class="form-control" id="milestones" ng-model="formData.milestones" placeholder="Project milestones" required>
+        <input class="form-control" id="milestones" ng-model="formData.Milestones" placeholder="Project milestones" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.milestones">
+    <div class="form-group" ng-if="wasFilled.Milestones">
         <label for="risks">Risks</label>
-        <input class="form-control" id="risks" ng-model="formData.risks" placeholder="Project risks" required>
+        <input class="form-control" id="risks" ng-model="formData.Risks" placeholder="Project risks" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.risks">
+    <div class="form-group" ng-if="wasFilled.Risks">
         <label for="management">Management</label>
-        <input class="form-control" id="management" ng-model="formData.management" placeholder="Project management" required>
+        <input class="form-control" id="management" ng-model="formData.Management" placeholder="Project management" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.management">
+    <div class="form-group" ng-if="wasFilled.Management">
         <label for="technologies">Technologies</label>
-        <input class="form-control" id="technologies" ng-model="formData.technologies" placeholder="Project technologies" required>
+        <input class="form-control" id="technologies" ng-model="formData.Technologies" placeholder="Project technologies" required>
     </div>
-    <div class="form-group" ng-if="wasFilled.technologies">
+    <div class="form-group" ng-if="wasFilled.Technologies">
         <label for="jobs">Jobs</label>
-        <input class="form-control" id="jobs" ng-model="formData.jobs" placeholder="Project jobs" required>
+        <input class="form-control" id="jobs" ng-model="formData.Jobs" placeholder="Project jobs" required>
     </div>
-    <button type="button" class="btn btn-primary" ng-disabled="!wasFilled.jobs" ng-click="saveData()">Save</button>
+    <button type="button" class="btn btn-primary" ng-disabled="!wasFilled.Jobs" ng-click="saveData()">Save</button>
 </form>

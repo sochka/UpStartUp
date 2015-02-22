@@ -33,8 +33,10 @@ angular.module('appStartup', ['ui.router'])
         }, true);
 
         $scope.saveData = function () {
+            
             $http.put('/api/startup/add/', $scope.formData).then(function (result) {
-
+                $scope.formData['Created At'] = (new Date()).toISOString();
+                $scope.formData['Updated At'] = (new Date()).toISOString();
             }, function (error) {
 
             });
