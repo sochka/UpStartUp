@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Sun Feb 22 2015 05:38:02 GMT+0000 (UTC) -->
+<html data-wf-site="54e8fcc878da9cde63801b7d" data-wf-page="54e8fcc878da9cde63801b7f" data-wf-status='1'>
+
+<head>
+    <meta charset="utf-8">
+    <title>UpStartUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Webflow">
+    <link rel="stylesheet" type="text/css" href="https://daks2k3a4ib2z.cloudfront.net/54e8fcc878da9cde63801b7d/css/upstartup.webflow.188745c51.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Montserrat:400,700", "Varela Round:400", "Varela:400"]
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/0globals/modernizr-2.7.1.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/530e2aa37d58f31d3100015e/53aa594370feebe336528257_webclip-gallio.png">
+    <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/530e2aa37d58f31d3100015e/53aa594370feebe336528257_webclip-gallio.png">
+    <style type="text/css">
+#mainForm {
+    color: white;
+    font-size: 16px;
+}
+.checkboxtext
+{
+  /* Checkbox text */
+  font-size: 110%;
+  display: inline;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+  margin: 10px;
+}
+    </style>
+</head>
+
+<body>
+    <header class="nav-bar">
+        <div class="w-container">
+            <div class="w-row">
+                <div class="w-col w-col-4 w-clearfix brand-column">
+                    <div class="company">UpSTartUp</div>
+                </div>
+                <nav class="w-col w-col-8 nav-column"><a class="nav-link" href="#features">Startup feed</a><a class="nav-link sign-up" href="#page-nav-Customers" target="_self">Profile</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="section hero">
+        <div class="w-container">
+            <h1 class="hero-heading">New startup</h1>
+            <p class="hero-subhead">Get ready to be publicly known!</p>
+            <div class="w-form">
+                
+                <form novalidate id="mainForm">
+    <h3></h3>
+    <div class="form-group">
+        <label for="image">Name</label>
+        <input class="form-control, w-input" id="name" ng-model="formData.Name" placeholder="Project name">
+    </div>
+    <div class="form-group">
+        <label for="WebsiteLink">Website link</label>
+        <input class="form-control, w-input" id="WebsiteLink" ng-model="formData.WebsiteLink" placeholder="Website link" type="url">
+    </div>
+    <div class="form-group">
+        <label for="VideoLink">Product video link</label>
+        <input class="form-control, w-input" id="VideoLink" ng-model="formData.VideoLink" placeholder="Video Link" type="url">
+    </div>
+    <div class="form-group">
+        <label for="image">Image</label>
+        <input class="form-control, w-input" id="image" ng-model="formData.Image" placeholder="Image url">
+    </div>
+    <div class="form-group">
+        <h3> Problem</h3>
+        <label for="areas">Areas</label>
+        <select class="form-control, w-input" id="areas" ng-model="formData.Areas" placeholder="Project area">
+            <option>Information Technology</option>
+            <option>Consumers</option>
+            <option>Consumer Internet</option>
+            <option>Consumer Goods</option>
+            <option>Games</option>
+            <option>Personal Health</option>
+            <option>Enterprises</option>
+            <option>Media</option>
+            <option>Health Care</option>
+            <option>Education</option>
+            <option>Finance</option>
+            <option>Life Sciences</option>
+            <option>Platforms</option>
+            <option>Health and Wellness</option>
+            <option>Fashion</option>
+            <option>Retail</option>
+            <option>Sports</option>
+            <option>Design</option>
+            <option>Travel</option>
+            <option>Clean Technology</option>
+            <option>Web Development</option>
+            <option>Demographies</option>
+            <option>Real Estate</option>
+            <option>Automotive</option>
+            <option>Entertainment</option>
+            <option>Events</option>
+            <option>Energy</option>
+        </select>
+    </div>
+    <div class="form-group" style="text-align: left ;">
+        <b>Situation with existing solutions</b><br>
+        <input class="checkboxtext" ng-model="formData.Situation.reqFun" type="checkbox">&nbsp; They do not provide functions<br>
+        <input class="checkboxtext" ng-model="formData.Situation.poorQuality" type="checkbox">&nbsp; They work with the poor quality<br>
+        <input class="checkboxtext" ng-model="formData.Situation.service" type="checkbox">&nbsp; They do not provide the necessary service<br>
+        <input class="checkboxtext" ng-model="formData.Situation.expensive" type="checkbox">&nbsp; They are expensive<br>
+        <input class="checkboxtext" ng-model="formData.Situation.timeConsuming" type="checkbox">&nbsp; They are time consuming<br>
+        <input class="checkboxtext" ng-model="formData.Situation.inconvenient" type="checkbox">&nbsp; They are inconvenient<br>
+        Notes: <input class="checkboxtext"  class="form-control, w-input"  ng-model="formData.SituationNotes">
+    </div>
+    <div class="form-group">
+        <label for="idea">Idea</label>
+        <textarea rows="5" class="form-control, w-input" id="idea" ng-model="formData.Idea" placeholder="Project idea">
+        </textarea>
+    </div>
+    <h3> Target audience</h3>
+    <div class="form-group">
+        <b>b2c customers</b>
+        <table class="table">
+            <tr>
+                <th>Name of group</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Location</th>
+                <th>Interests</th>
+                <th>Budget</th>
+                <th>Amount</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="b2cAuditory in formData.b2cAuditories">
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.groupName" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.gender" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.age" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.location" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.interests" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.budget" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2cAuditory.amount" class="form-control, w-input"></textarea></td>
+                <td><input type="button" class="form-control, w-input btn-danger"
+                           ng-click="formData.b2cAuditories.splice(formData.b2cAuditories.indexOf(b2cAuditory), 1)"
+                        value="Delete"></td>
+            </tr>
+        </table>
+        <input type="button" ng-click="formData.b2cAuditories.push({})" value="Add new row">
+        <br>
+    </div>
+    <div class="form-group">
+        <b>b2b customers</b>
+        <table class="table">
+            <tr>
+                <th>Name of group</th>
+                <th>Type</th>
+                <th>Age</th>
+                <th>Location</th>
+                <th>Goals</th>
+                <th>Budget</th>
+                <th>Amount</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="b2bAuditory in formData.b2bAuditories">
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.groupName" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.type" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.age" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.location" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.goals" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.budget" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="b2bAuditory.amount" class="form-control, w-input"></textarea></td>
+                <td><input type="button" class="form-control, w-input btn-danger"
+                           ng-click="formData.b2bAuditories.splice(formData.b2bAuditories.indexOf(b2bAuditory), 1)"
+                           value="Delete"></td>
+            </tr>
+        </table>
+        <input type="button" ng-click="formData.b2bAuditories.push({})" value="Add new row">
+        <br>
+    </div>
+    Notes: <input  class="form-control, w-input"  ng-model="formData.TargetAudienceNotes">
+    <h3>Product description</h3>
+    <div class="form-group" style="text-align: left ;">
+        <label for="phaseOfDev">Phase of development</label><br>
+        <input type="checkbox" ng-model="formData.phaseOfDev.Concept">Concept<br>
+        <input type="checkbox" ng-model="formData.phaseOfDev.MVP">MVP<br>
+        <input type="checkbox" ng-model="formData.phaseOfDev.Product">Product with users<br>
+        <input type="checkbox" ng-model="formData.phaseOfDev.Scaling">Scaling sales<br>
+    </div>
+    <div class="form-group" style="text-align: left ;">
+        <b>Type</b><br>
+        <input type="checkbox" ng-model="formData.type.Service">Service<br>
+        <input type="checkbox" ng-model="formData.type.Content">Content<br>
+        <input type="checkbox" ng-model="formData.type.Network">Network<br>
+        <input type="checkbox" ng-model="formData.type.Game">Game<br>
+        <input type="checkbox" ng-model="formData.type.Application">Application<br>
+        <input type="checkbox" ng-model="formData.type.PhysicalProduct">Physical Product<br>
+    </div>
+    <div class="form-group" style="text-align: left ;">
+        <b>Platforms</b><br>
+        <input type="checkbox" ng-model="formData.platform.Android">Android<br>
+        <input type="checkbox" ng-model="formData.platform.iOS">iOS<br>
+        <input type="checkbox" ng-model="formData.platform.Mac">Mac<br>
+        <input type="checkbox" ng-model="formData.platform.Windows">Windows<br>
+        <input type="checkbox" ng-model="formData.platform.WindowsPhone">WindowsPhone<br>
+        <input type="checkbox" ng-model="formData.platform.Linux">Linux<br>
+        <input type="checkbox" ng-model="formData.platform.Other">Other<br>
+    </div>
+    <h3>Uniqueness</h3>
+    <div class="form-group" style="text-align: left ;">
+        <b>Properties</b><br>
+        <input type="checkbox" ng-model="formData.properties.uniqueTech">Unique technology<br>
+        <input type="checkbox" ng-model="formData.properties.marketingInnovations">Innovations in marketing<br>
+        <input type="checkbox" ng-model="formData.properties.deepCustomerConnection">Deep connections with customers<br>
+        <input type="checkbox" ng-model="formData.properties.lowestPrice">The lowest price<br>
+    </div>
+    <b>Intellectual property:</b> <input  class="form-control, w-input"  ng-model="formData.IntellectualProperty">
+    <h3>User benefits</h3>
+    <div class="form-group" style="text-align: left ;">
+        <b>b2c customers:</b><br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.createsFeatures">Creates new features<br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.improvesQofP">Improves the quality of performance<br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.providesService">Provides additional service<br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.reducesCosts">Reduces costs<br>
+        <input type="checkbox" ng-model="formData.benefits.b2c.improvesUsability">Improves the usability<br>
+    </div>
+    <div class="form-group" style="text-align: left ;">
+        <b>b2b customers:</b><br>
+        <input type="checkbox" ng-model="formData.benefits.b2b.helpsToFindNewCustomers">Helps to find new customers<br>
+        <input type="checkbox" ng-model="formData.benefits.b2b.increasesLoyalty">Increases the loyalty of existing customers<br>
+        <input type="checkbox" ng-model="formData.benefits.b2b.helpsToDifferentiate">Helps to differentiate from competitors<br>
+        <input type="checkbox" ng-model="formData.benefits.b2b.reducesCosts">Reduces costs<br>
+    </div>
+    Notes: <input  class="form-control, w-input"  ng-model="formData.benefits.notes">
+    <div class="form-group">User benefits
+        <h3>Market</h3>
+        <table class="table">
+            <tr>
+                <th>Market name</th>
+                <th>Market size</th>
+                <th>Currency</th>
+                <th>% of changes vs previous year</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="market in formData.markets">
+                <td><textarea elastic rows="1" ng-model="market.name" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="market.size" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="market.currency" class="form-control, w-input"></textarea></td>
+                <td><textarea elastic rows="1" ng-model="market.percentOfChanges" class="form-control, w-input"></textarea></td>
+                <td><input type="button" class="form-control, w-input btn-danger"
+                           ng-click="formData.markets.splice(formData.markets.indexOf(market), 1)"
+                           value="Delete"></td>
+            </tr>
+        </table>
+        <input type="button" ng-click="formData.markets.push({})" value="Add new row">
+        <br>
+    </div>
+    <div class="form-group">
+        <h3>Competition</h3>
+        <input class="form-control, w-input" id="competition" ng-model="formData.Competition" placeholder="Project competition">
+    </div>
+    <div class="form-group">
+        <label for="strategy">Strategy</label>
+        <input class="form-control, w-input" id="strategy" ng-model="formData.Strategy" placeholder="Project strategy">
+    </div>
+    <div class="form-group">
+        <label for="promotion">Promotion</label>
+        <input class="form-control, w-input" id="promotion" ng-model="formData.Promotion" placeholder="Project promotion">
+    </div>
+    <div class="form-group">
+        <label for="business">Business</label>
+        <input class="form-control, w-input" id="business" ng-model="formData.Business" placeholder="Project business">
+    </div>
+    <div class="form-group">
+        <label for="milestones">Milestones</label>
+        <input class="form-control, w-input" id="milestones" ng-model="formData.Milestones" placeholder="Project milestones">
+    </div>
+    <div class="form-group">
+        <label for="risks">Risks</label>
+        <input class="form-control, w-input" id="risks" ng-model="formData.Risks" placeholder="Project risks">
+    </div>
+    <div class="form-group">
+        <label for="management">Management</label>
+        <input class="form-control, w-input" id="management" ng-model="formData.Management" placeholder="Project management">
+    </div>
+    <div class="form-group">
+        <label for="technologies">Technologies</label>
+        <input class="form-control, w-input" id="technologies" ng-model="formData.Technologies" placeholder="Project technologies">
+    </div>
+    <div class="form-group">
+        <label for="jobs">Jobs</label>
+        <input class="form-control, w-input" id="jobs" ng-model="formData.Jobs" placeholder="Project jobs">
+    </div>
+    <div class="button-group">
+            
+        <a class="button sign-up" type="button" ng-disabled="!wasFilled.Jobs" ng-click="saveData()">Save</a>
+
+    </div>
+</form>
+                <div class="w-form-done">
+                    <p>Thank you! Your submission has been received!</p>
+                </div>
+                <div class="w-form-fail">
+                    <p>Oops! Something went wrong while submitting the form :(</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="section footer">
+        <div class="w-container">
+            <div class="w-row">
+                <div class="w-col w-col-6">
+                    <div class="footer-text">Dream team&nbsp;</div>
+                </div>
+                <div class="w-col w-col-6 right-footer-col">
+                    <a class="w-inline-block social-icon" href="mailto:support@webflow.com?subject=Hello"><img src="http://uploads.webflow.com/54e8fcc878da9cde63801b7d/35ec5a20-6309-494a-9d48-0e463a4d6214_14-social-email.png" width="20" alt="35ec5a20-6309-494a-9d48-0e463a4d6214_14-social-email.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/54e8fcc878da9cde63801b7d/js/webflow.b67a707b9.js"></script>
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+
+</html>
